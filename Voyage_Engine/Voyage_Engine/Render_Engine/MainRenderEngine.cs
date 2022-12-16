@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
+using Voyage_Engine.Console;
 using Voyage_Engine.Game_Engine.Engine;
 using Voyage_Engine.Rendere_Engine.RenderedObjects;
 using Voyage_Engine.Rendere_Engine.Vector;
@@ -42,6 +44,12 @@ namespace Voyage_Engine.Rendere_Engine
             _window = new Canves();
             _window.Size = new Size((int) _screenSize.X, (int) _screenSize.Y);
             _window.Text = _windowTitle;
+
+            FileStream _fileStream = File.Open(Application.StartupPath + "/Resources/Engine_Resources/Icon.ico",
+                FileMode.Open);
+            _window.Icon =  new Icon(_fileStream);
+            
+            _fileStream.Close();
             
             _window.Activated += StartRenderLoop;
             _window.FormClosed += CloseRender;
@@ -93,7 +101,7 @@ namespace Voyage_Engine.Rendere_Engine
                 return;
             
             _renderLoopThread.Start();
-            Console.WriteLine("Engine Start");
+            Debug.Log("Render Engine starting....");
         }
 
         private void CloseRender(object sender, FormClosedEventArgs e)
@@ -105,7 +113,7 @@ namespace Voyage_Engine.Rendere_Engine
             OnCloseWindow?.Invoke();
             
             _renderLoopThread.Abort();
-            Console.WriteLine("Render Engine stop...");
+            Debug.Log("Render Engine stop...");
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Voyage_Engine.Game_Engine.Engine
         {
             _gameObjects = new List<BaseObject>();
             _mainRenderEngine = new MainRenderEngine(new Vector2(500, 500), "Voyage Engine");
-            MainInputSystem.CheckInput(_mainRenderEngine.Window);
+            InputReceiver.Init(_mainRenderEngine.Window);
             _mainRenderEngine.OnBeforeFrame += Update;
             _mainRenderEngine.OnBeforeFirstFrame += Start;
             _mainRenderEngine.OnAfterFrame += LateUpdate;

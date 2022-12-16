@@ -1,9 +1,8 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
+using Voyage_Engine.Console;
 using Voyage_Engine.Game_Engine.GameObjectSystem;
 using Voyage_Engine.Game_Engine.InputSystem;
-using Voyage_Engine.Rendere_Engine.Vector;
 
 namespace Voyage_Engine.Game_Engine.Objects
 {
@@ -16,21 +15,22 @@ namespace Voyage_Engine.Game_Engine.Objects
         {
             Instantiate();
             cube = new Cube(Transform, Color.Red);
-            MainInputSystem.OnKeyDown += MoveCube;
+            InputReceiver.OnKeyDown += MoveCube;
+            
+            Debug.Log(this,true);
+            Debug.LogWarning(this);
+            Debug.LogError(this);
         }
 
         public override void Update()
         {
+
+
             
         }
 
         private void MoveCube(Keys keys)
         {
-            if (keys == Keys.A)
-            {
-                y += 1;
-                cube._transform.Position = new Vector2(cube._transform.Position.X, y);
-            }
         }
     }
 }

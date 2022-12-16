@@ -5,11 +5,23 @@ namespace Voyage_Engine.Game_Engine.GameObjectSystem
 {
     public class GameObject : BaseObject, IInstantiate
     {
+        private string _name;
         private Transform _transform;
         private bool _isActive;
 
         public Transform Transform => _transform;
         public bool IsActive => _isActive;
+
+        public string Name
+        {
+            get { return _name;}
+            set
+            {
+                if (_name.Length == 0)
+                {
+                    _name = GetType().ToString();
+                }
+            } }
 
         public void SetActive(bool isActive)
         {

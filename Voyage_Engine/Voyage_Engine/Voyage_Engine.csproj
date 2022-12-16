@@ -41,10 +41,11 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Console\Debug.cs" />
         <Compile Include="Game_Engine\Engine\MainGameEngine.cs" />
         <Compile Include="Game_Engine\GameObjectSystem\BaseObject.cs" />
         <Compile Include="Game_Engine\GameObjectSystem\GameObject.cs" />
-        <Compile Include="Game_Engine\InputSystem\MainInputSystem.cs" />
+        <Compile Include="Game_Engine\InputSystem\InputReceiver.cs" />
         <Compile Include="Game_Engine\Objects\Cube.cs" />
         <Compile Include="Game_Engine\Objects\Player.cs" />
         <Compile Include="Game_Engine\TransformSystem\Node.cs" />
@@ -56,7 +57,9 @@
         <Compile Include="Render_Engine\Vector\Vector2.cs" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Console" />
+      <EmbeddedResource Include="Render_Engine\MainRenderEngine.resx">
+        <DependentUpon>MainRenderEngine.cs</DependentUpon>
+      </EmbeddedResource>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

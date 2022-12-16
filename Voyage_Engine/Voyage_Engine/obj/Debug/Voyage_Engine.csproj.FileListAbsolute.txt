@@ -5,3 +5,5 @@ C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\Voyage_En
 C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.CoreCompileInputs.cache
 C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\Voyage_Engine\obj\Debug\Voyage_Engine.exe
 C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\Voyage_Engine\obj\Debug\Voyage_Engine.pdb
+C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\Voyage_Engine\obj\Debug\Voyage_Engine.Rendere_Engine.Canves.resources
+C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.GenerateResource.cache
