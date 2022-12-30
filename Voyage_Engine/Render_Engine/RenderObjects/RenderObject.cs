@@ -1,10 +1,11 @@
 ﻿using System.Drawing;
+using Voyage_Engine.Game_Engine.ComponentSystem;
 
 namespace Voyage_Engine.Rendere_Engine.RenderedObjects
 {
-    public abstract class RenderObject : IRenderable
+    public abstract class RenderObject : Component, IRenderable
     {
-        public RenderObject()
+        protected RenderObject()
         {
             MainRenderEngine.RegisterObject(this);
         }

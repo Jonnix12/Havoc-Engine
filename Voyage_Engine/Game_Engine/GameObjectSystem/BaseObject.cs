@@ -1,30 +1,17 @@
-﻿using Voyage_Engine.Game_Engine.Engine;
+﻿
+using Voyage_Engine.Game_Engine.Engine;
 
 namespace Voyage_Engine.Game_Engine.GameObjectSystem
 {
     public abstract class BaseObject
     {
-        private int InstanceID;
+        private int _instanceID = -1;
 
-        protected BaseObject()
-        {
-            MainGameEngine.RegisterObject(this);
-            //need to set Instance
-        }
+        public int InstanceId => _instanceID;
 
-        public virtual void Start()
+        protected void InitializedBaseObject()
         {
-            
-        }
-
-        public virtual void Update()
-        {
-            
-        }
-
-        public virtual void LateUpdate()
-        {
-            
+            _instanceID = InstanceIDGenerator.GetInstanceID(this);
         }
     }
 }

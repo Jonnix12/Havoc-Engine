@@ -1,79 +1,71 @@
-﻿using Voyage_Engine.Game_Engine.TransformSystem;
-using Voyage_Engine.Rendere_Engine.Vector;
+﻿using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using Voyage_Engine.Game_Engine.ComponentSystem;
+using Voyage_Engine.Game_Engine.FactorySystem;
+using Voyage_Engine.Game_Engine.TransformSystem;
 
 namespace Voyage_Engine.Game_Engine.GameObjectSystem
 {
-    public class GameObject : BaseObject, IInstantiate
+    public class GameObject : BaseObject , IInstantiate , IGameObject
     {
         private string _name;
         private Transform _transform;
         private bool _isActive;
-
+        
+        private List<IComponent> _components;
+        
+        public string Name => _name;
         public Transform Transform => _transform;
         public bool IsActive => _isActive;
-
-        public string Name
-        {
-            get { return _name;}
-            set
-            {
-                if (_name.Length == 0)
-                {
-                    _name = ToString();//need more work
-                }
-            } }
-
         
+        public GameObject GameObjectConstructor(Transform transform,string name)
+        {
+            InitializedBaseObject();
+
+            _components = new List<IComponent>();
+            
+            transform.SetGameObject(this);
+
+            _name = name;
+
+            _transform = transform;
+
+            return this;
+        }
+
+        public void AddComponent<T>() where T : IComponent , new()
+        {
+            T component = new T();
+            
+            _components.Add(component);
+        }
         
         public void SetActive(bool isActive)
         {
             //need active logic
             _isActive = isActive;
         }
-
-        public void Instantiate()
-        {
-            _transform = new Transform(new Vector2(100, 100), new Vector2(20, 20));
-        }
-
-        public void Instantiate(Vector2 position)
-        {
-            _transform = new Transform(position, Vector2.Zero);
-        }
-
-        public void Instantiate(Transform parent)
-        {
-            _transform = new Transform(parent);
-        }
-
-        public void Instantiate(Vector2 position, Vector2 scale)
-        {
-            _transform = new Transform(position, scale);
-        }
-
-        public void Instantiate(Vector2 position, Transform parent)
-        {
-            _transform = new Transform(position, Vector2.Zero, parent);
-        }
-
-        public void Instantiate(Vector2 position, Transform parent, Vector2 scale)
-        {
-            _transform = new Transform(position, scale, parent);
-        }
-
+        
         public override string ToString()
         {
             return GetType().Name;
         }
-    }
 
-    public interface IInstantiate
-    {
-        void Instantiate();
-        void Instantiate(Vector2 position);
-        void Instantiate(Transform parent);
-        void Instantiate(Vector2 position,Vector2 scale);
-        void Instantiate(Vector2 position, Transform parent);
-        void Instantiate(Vector2 position, Transform parent,Vector2 scale);
+        public virtual void Start()
+        {
+            foreach (var component in _components)
+                component.InitComponent(this);
+        }
+
+        public virtual void Update()
+        {
+            foreach (var component in _components)
+                component.UpdateComponent();
+        }
+
+        public virtual void LateUpdate()
+        {
+            
+        }
     }
 }

@@ -26,14 +26,13 @@ namespace Voyage_Engine.Game_Engine.TransformSystem
         {
             _position = Vector2.One;
             _scale = Vector2.One;
-            SetParent(MainGameEngine.RootTransform);
         }
 
         public Transform(Transform parent)
         {
             SetParent(parent);
         }
-        
+
         public Transform(Vector2 position, Vector2 scale)
         {
             _position = position;
@@ -46,6 +45,11 @@ namespace Voyage_Engine.Game_Engine.TransformSystem
             _position = position;
             _scale = scale;
             SetParent(parent);
+        }
+
+        public void SetGameObject(GameObject gameObject)
+        {
+            _gameObject = gameObject;
         }
     }
 }

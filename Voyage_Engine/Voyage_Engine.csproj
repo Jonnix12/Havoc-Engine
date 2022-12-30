@@ -42,28 +42,36 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Console\Debug.cs" />
+        <Compile Include="Game_Engine\Assets\Scenes\MainScene.cs" />
+        <Compile Include="Game_Engine\Assets\Sprites\WarriorSprite.cs" />
+        <Compile Include="Game_Engine\ComponentSystem\Component.cs" />
+        <Compile Include="Game_Engine\ComponentSystem\IComponent.cs" />
+        <Compile Include="Game_Engine\Engine\InstanceIDGenerator.cs" />
         <Compile Include="Game_Engine\Engine\MainGameEngine.cs" />
         <Compile Include="Game_Engine\GameObjectSystem\BaseObject.cs" />
         <Compile Include="Game_Engine\GameObjectSystem\GameObject.cs" />
+        <Compile Include="Game_Engine\GameObjectSystem\IGameObject.cs" />
         <Compile Include="Game_Engine\InputSystem\InputReceiver.cs" />
-        <Compile Include="Game_Engine\Objects\Cube.cs" />
-        <Compile Include="Game_Engine\Objects\Object1.cs" />
-        <Compile Include="Game_Engine\Objects\Object3.cs" />
-        <Compile Include="Game_Engine\Objects\object4.cs" />
-        <Compile Include="Game_Engine\Objects\objectr2.cs" />
-        <Compile Include="Game_Engine\Objects\Player.cs" />
+        <Compile Include="Game_Engine\FactorySystem\Factory.cs" />
+        <Compile Include="Game_Engine\Objects\Warrior.cs" />
+        <Compile Include="Game_Engine\ResourcesSystem\Resources.cs" />
+        <Compile Include="Game_Engine\SceneSystem\Scene.cs" />
         <Compile Include="Game_Engine\TransformSystem\Node.cs" />
         <Compile Include="Game_Engine\TransformSystem\Transform.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Render_Engine\MainRenderEngine.cs" />
         <Compile Include="Render_Engine\RenderObjects\RenderObject.cs" />
+        <Compile Include="Render_Engine\Sprite\SpriteRenderer.cs" />
         <Compile Include="Render_Engine\Vector\Vector2.cs" />
     </ItemGroup>
     <ItemGroup>
       <EmbeddedResource Include="Render_Engine\MainRenderEngine.resx">
         <DependentUpon>MainRenderEngine.cs</DependentUpon>
       </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Game_Engine\Assets\Sprites\SpritesAssets\png-transparent-the-woman-warrior-female-woman-warrior-game-child-cg-artwork-thumbnail.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

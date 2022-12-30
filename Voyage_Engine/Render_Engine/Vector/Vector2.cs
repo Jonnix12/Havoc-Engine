@@ -33,5 +33,10 @@
 
             return new Vector2(x, y);
         }
+
+        public override string ToString()
+        {
+            return $" X:{X},Y:{Y} ";
+        }
     }
 }

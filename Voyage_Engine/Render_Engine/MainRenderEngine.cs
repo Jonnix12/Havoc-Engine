@@ -5,7 +5,6 @@ using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 using Voyage_Engine.Console;
-using Voyage_Engine.Game_Engine.Engine;
 using Voyage_Engine.Rendere_Engine.RenderedObjects;
 using Voyage_Engine.Rendere_Engine.Vector;
 
@@ -34,10 +33,14 @@ namespace Voyage_Engine.Rendere_Engine
         private Canves _window;
         private Thread _renderLoopThread;
 
+        private bool _sceneInitialized;
+
         public Canves Window => _window;
 
         public MainRenderEngine(Vector2 screenSize,string windowTitle)
         {
+            _sceneInitialized = false;
+            
             _screenSize = screenSize;
             _windowTitle = windowTitle;
 
@@ -45,11 +48,11 @@ namespace Voyage_Engine.Rendere_Engine
             _window.Size = new Size((int) _screenSize.X, (int) _screenSize.Y);
             _window.Text = _windowTitle;
 
-            FileStream _fileStream = File.Open(Application.StartupPath + "/Resources/Engine_Resources/Icon.ico",
+            FileStream fileStream = File.Open(Application.StartupPath + "/Resources/Engine_Resources/Icon.ico",
                 FileMode.Open);
-            _window.Icon =  new Icon(_fileStream);
+            _window.Icon =  new Icon(fileStream);
             
-            _fileStream.Close();
+            fileStream.Close();
             
             _window.Activated += StartRenderLoop;
             _window.FormClosed += CloseRender;
@@ -64,7 +67,7 @@ namespace Voyage_Engine.Rendere_Engine
         {
             Application.Run(_window);
         }
-        
+
         private void RenderLoop()
         {
             OnBeforeFirstFrame?.Invoke();
@@ -72,7 +75,7 @@ namespace Voyage_Engine.Rendere_Engine
             while (_renderLoopThread.IsAlive)
             {
                 OnBeforeFrame?.Invoke();
-                
+
                 _window.BeginInvoke((MethodInvoker) delegate { _window.Refresh(); });
                 Thread.Sleep(1);
                 
@@ -80,7 +83,7 @@ namespace Voyage_Engine.Rendere_Engine
             }
         }
 
-        private void Render(object sender, PaintEventArgs e)
+        private static void Render(object sender, PaintEventArgs e)
         {
             Graphics graphics = e.Graphics;
             

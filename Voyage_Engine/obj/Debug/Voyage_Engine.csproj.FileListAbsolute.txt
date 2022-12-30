@@ -15,3 +15,12 @@ C:\Users\jonha\Documents\GitHub\C#\Voyage--Engine\Voyage_Engine\obj\Debug\Voyage
 C:\Users\jonha\Documents\GitHub\C#\Voyage--Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.CoreCompileInputs.cache
 C:\Users\jonha\Documents\GitHub\C#\Voyage--Engine\Voyage_Engine\obj\Debug\Voyage_Engine.exe
 C:\Users\jonha\Documents\GitHub\C#\Voyage--Engine\Voyage_Engine\obj\Debug\Voyage_Engine.pdb
+C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\bin\Debug\Voyage_Engine.exe
+C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\bin\Debug\Voyage_Engine.pdb
+C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.AssemblyReference.cache
+C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.SuggestedBindingRedirects.cache
+C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.Rendere_Engine.Canves.resources
+C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.GenerateResource.cache
+C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.CoreCompileInputs.cache
+C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.exe
+C:\Users\jonharel\Documents\Voyage _Engine\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.pdb
