@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.InteropServices;
+using Voyage_Engine.Console;
 using Voyage_Engine.Game_Engine.ComponentSystem;
 using Voyage_Engine.Game_Engine.FactorySystem;
 using Voyage_Engine.Game_Engine.TransformSystem;
@@ -17,7 +17,10 @@ namespace Voyage_Engine.Game_Engine.GameObjectSystem
         public string Name => _name;
         public Transform Transform => _transform;
         public bool IsActive => _isActive;
-        
+
+        public List<IComponent> Components => _components;
+
+
         public GameObject GameObjectConstructor(Transform transform,string name)
         {
             InitializedBaseObject();
@@ -33,11 +36,21 @@ namespace Voyage_Engine.Game_Engine.GameObjectSystem
             return this;
         }
 
-        public void AddComponent<T>() where T : IComponent , new()
+        public T AddComponent<T>() where T : IComponent , new()
         {
             T component = new T();
-            
+            for (int i = 0; i < _components.Count; i++)
+            {
+                if (_components[i].Equals(component))
+                {
+                    Debug.LogWarning($"{_name}: You are trying to add a component that already exists");
+                    return default(T);
+                }
+                else
+                    continue;
+            }
             _components.Add(component);
+            return component;
         }
         
         public void SetActive(bool isActive)
@@ -66,6 +79,18 @@ namespace Voyage_Engine.Game_Engine.GameObjectSystem
         public virtual void LateUpdate()
         {
             
+        }
+
+        public virtual T GetComponent<T>(T findObject)
+        {
+            for (int i = 0; i < _components.Count; i++)
+            {
+                if (Components[i].Equals(findObject))
+                {
+                    return (T)findObject;
+                }
+            }
+            return default(T);
         }
     }
 }
