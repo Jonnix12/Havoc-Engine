@@ -47,6 +47,11 @@ namespace Voyage_Engine.Game_Engine.TransformSystem
             SetParent(parent);
         }
 
+        public void MoveTowards(Vector2 destination)
+        {
+            
+        }
+
         public void SetGameObject(GameObject gameObject)
         {
             _gameObject = gameObject;
