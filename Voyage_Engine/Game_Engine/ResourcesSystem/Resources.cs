@@ -4,7 +4,6 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
-using Debug = Voyage_Engine.Console.Debug;
 
 namespace Voyage_Engine.Game_Engine.ResourcesSystem
 {

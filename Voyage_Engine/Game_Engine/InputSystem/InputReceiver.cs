@@ -1,25 +1,30 @@
 ﻿using System;
 using System.Windows.Forms;
 using Voyage_Engine.Rendere_Engine;
+using Voyage_Engine.Rendere_Engine.Vector;
 
 namespace Voyage_Engine.Game_Engine.InputSystem
 {
-    public static class InputReceiver
+    public class InputReceiver
     {
         #region Events
 
+        public static event Action<InputDataMouse> OnMouseDown; 
+        public static event Action<InputDataMouse> OnMouseClick; 
+        public static event Action<InputDataMouse> OnMouseHold; 
+        public static event Action<InputDataMouse> OnMouseUp; 
         /// <summary>
         /// Fires an event once the key is pressed
         /// </summary>
-        public static event Action<Keys> OnKeyDown;
+        public static event Action<InputDataKeyboard> OnKeyDown;
         /// <summary>
         /// Fires an event as long as the key is pressed
         /// </summary>
-        public static event Action<Keys> OnKeyHold;
+        public static event Action<InputDataKeyboard> OnKeyHold;
         /// <summary>
         /// Fires an event as soon as the key is release
         /// </summary>
-        public static event Action<Keys> OnKeyUp;
+        public static event Action<InputDataKeyboard> OnKeyUp;
 
         #endregion
         
@@ -27,6 +32,7 @@ namespace Voyage_Engine.Game_Engine.InputSystem
 
         private static Canves _canves;
         private static bool _isKeyDown;
+        private static bool _isMouseDown;
         private static bool _isKeyPressedOnesEvent;
         private static bool _isKeyPressedOnesM;//need to get more work
 
@@ -42,9 +48,40 @@ namespace Voyage_Engine.Game_Engine.InputSystem
             _canves = canves;
             _canves.KeyDown += InputDown;
             _canves.KeyUp += InputUp;
+            _canves.MouseClick += MouseClick;
+            _canves.MouseDown += MouseDown;
+            _canves.MouseUp += MouseUp;
+            _canves.MouseMove += MouseHold;
             _isKeyPressedOnesM = false;
             _isKeyPressedOnesEvent = false;
+            _isMouseDown = false;
         }
+
+        private static void MouseClick(object sender, MouseEventArgs e)
+        {
+            OnMouseClick?.Invoke(new InputDataMouse(e.Button,new Vector2(e.X,e.Y)));
+        }
+        
+        private static void MouseDown(object sender, MouseEventArgs e)
+        {
+            _isMouseDown = true;
+            OnMouseDown?.Invoke(new InputDataMouse(e.Button,new Vector2(e.X,e.Y)));
+        }
+        
+        private static void MouseUp(object sender, MouseEventArgs e)
+        {
+            _isMouseDown = false;
+            OnMouseUp?.Invoke(new InputDataMouse(e.Button,new Vector2(e.X,e.Y)));
+        }
+
+        private static void MouseHold(object sender, MouseEventArgs e)
+        {
+            while (_isMouseDown)
+            {
+                OnMouseHold?.Invoke(new InputDataMouse(e.Button,new Vector2(e.X,e.Y)));
+            }
+        }
+        
         /// <summary>
         /// Cleans events and prepares the class for closing
         /// </summary>
@@ -83,6 +120,7 @@ namespace Voyage_Engine.Game_Engine.InputSystem
         
         #endregion
         
+        
         #region PrivateFunction
 
         private static void InputDown(object sender, KeyEventArgs e)
@@ -92,17 +130,17 @@ namespace Voyage_Engine.Game_Engine.InputSystem
             if (!_isKeyPressedOnesM)
             {
                 _isKeyPressedOnesM = true;
-                OnKeyDown?.Invoke(e.KeyCode);
+                OnKeyDown?.Invoke(new InputDataKeyboard(e.KeyCode));
             }
             
-            OnKeyHold?.Invoke(e.KeyCode);
+            OnKeyHold?.Invoke(new InputDataKeyboard(e.KeyCode));
         }
         private static void InputUp(object sender, KeyEventArgs e)
         {
             _isKeyPressedOnesEvent = false;
             _isKeyPressedOnesM = false;
             _isKeyDown = false;
-            OnKeyUp?.Invoke(e.KeyCode);
+            OnKeyUp?.Invoke(new InputDataKeyboard(e.KeyCode));
         }
         private static bool CheckInputType(Keys key)
         {
@@ -338,5 +376,31 @@ namespace Voyage_Engine.Game_Engine.InputSystem
         }
 
         #endregion
+    }
+
+    public struct InputDataKeyboard
+    {
+        private Keys _keysPrees;
+        public Keys KeysPrees => _keysPrees;
+
+        public InputDataKeyboard(Keys keys)
+        {
+            _keysPrees = keys;
+        }
+    }
+
+    public struct InputDataMouse
+    {
+        private MouseButtons _mouseButtons;
+        private Vector2 _positionOnScreen;
+        
+        public MouseButtons MouseButtons => _mouseButtons;
+        public Vector2 PositionOnScreen => _positionOnScreen;
+        
+        public InputDataMouse(MouseButtons mouseButtons, Vector2 positionOnScreen)
+        {
+            _mouseButtons = mouseButtons;
+            _positionOnScreen = positionOnScreen;
+        }
     }
 }
