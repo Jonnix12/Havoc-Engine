@@ -5,7 +5,7 @@ using Voyage_Engine.Rendere_Engine.Vector;
 
 namespace Voyage_Engine.Game_Engine.InputSystem
 {
-    public class InputReceiver
+    public class InputReceiver : IDisposable
     {
         #region Events
 
@@ -40,11 +40,12 @@ namespace Voyage_Engine.Game_Engine.InputSystem
         #endregion
 
         #region PublicFunction
+        
         /// <summary>
         /// Initializes the input system
         /// </summary>
         /// <param name="canves">The window from which the input will be received</param>
-        public static void Init(Canves canves)
+        public InputReceiver(Canves canves)
         {
             _canves = canves;
             _canves.KeyDown += InputDown;
@@ -61,10 +62,14 @@ namespace Voyage_Engine.Game_Engine.InputSystem
         /// <summary>
         /// Cleans events and prepares the class for closing
         /// </summary>
-        public static void Dispose()
+        public void Dispose()
         {
             _canves.KeyDown -= InputDown;
             _canves.KeyUp -= InputUp;
+            _canves.MouseClick -= MouseClick;
+            _canves.MouseDown -= MouseDown;
+            _canves.MouseUp -= MouseUp;
+            _canves.MouseMove -= MouseHold;
         }
         /// <summary>
         /// A function that checks whether a key on the keyboard is pressed, returns true as long as the key is pressed

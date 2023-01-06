@@ -13,7 +13,7 @@ namespace Voyage_Engine.Game_Engine.ResourcesSystem
         private static FileStream _fileStream;
         private static BinaryFormatter _formatter = new BinaryFormatter();
 
-        public static void Init()
+        public Resources()
         {
             var cache = Application.StartupPath;
 
@@ -24,7 +24,7 @@ namespace Voyage_Engine.Game_Engine.ResourcesSystem
             cache = stringBuilder.ToString();
             ResourcesPath = cache;
         }
-        
+
         public static T Load<T>(string path)
         {
             _fileStream = new FileStream(ResourcesPath + path, FileMode.Open,FileAccess.Read);

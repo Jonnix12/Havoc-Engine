@@ -28,11 +28,14 @@ namespace Voyage_Engine.Game_Engine.Engine
 
         public static Transform RootTransform => CurrentScene.RootTransform;
 
+        private InputReceiver _input;
+        private Resources _resources;
+
         public MainGameEngine()
         {
             _mainRenderEngine = new MainRenderEngine(new Vector2(1000, 1000), "Voyage Engine");
-            InputReceiver.Init(_mainRenderEngine.Window);
-            Resources.Init();
+            _input = new InputReceiver(_mainRenderEngine.Window);
+            _resources = new Resources();
 
             _scenes = new List<Scene>();
             
@@ -76,7 +79,12 @@ namespace Voyage_Engine.Game_Engine.Engine
             _mainRenderEngine.OnCloseWindow -= ExitEngine;
             _mainRenderEngine.OnAfterFrame -= LateUpdate;
             
-            InputReceiver.Dispose();
+            _input.Dispose();
         }
+    }
+
+    interface IInitialized : IDisposable
+    {
+        void Init();
     }
 }
