@@ -44,6 +44,7 @@
         <Compile Include="Assets\Scenes\MainScene.cs" />
         <Compile Include="Assets\Sprites\WarriorSprite.cs" />
         <Compile Include="Console\Debug.cs" />
+        <Compile Include="Console\TokenMachine\TokenMachine.cs" />
         <Compile Include="Game_Engine\ComponentSystem\Component.cs" />
         <Compile Include="Game_Engine\ComponentSystem\IComponent.cs" />
         <Compile Include="Game_Engine\Engine\InstanceIDGenerator.cs" />
@@ -53,6 +54,7 @@
         <Compile Include="Game_Engine\GameObjectSystem\IGameObject.cs" />
         <Compile Include="Game_Engine\InputSystem\InputReceiver.cs" />
         <Compile Include="Game_Engine\FactorySystem\Factory.cs" />
+        <Compile Include="Game_Engine\Objects\TestObject.cs" />
         <Compile Include="Game_Engine\Objects\Warrior.cs" />
         <Compile Include="Game_Engine\ResourcesSystem\Resources.cs" />
         <Compile Include="Game_Engine\SceneSystem\Scene.cs" />
@@ -64,6 +66,7 @@
         <Compile Include="Render_Engine\RenderObjects\RenderObject.cs" />
         <Compile Include="Render_Engine\Sprite\SpriteRenderer.cs" />
         <Compile Include="Render_Engine\Vector\Vector2.cs" />
+        <Compile Include="Time\Time.cs" />
     </ItemGroup>
     <ItemGroup>
       <EmbeddedResource Include="Render_Engine\MainRenderEngine.resx">

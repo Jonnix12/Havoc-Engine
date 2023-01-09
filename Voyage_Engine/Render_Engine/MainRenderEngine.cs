@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using Voyage_Engine.Console;
 using Voyage_Engine.Rendere_Engine.RenderedObjects;
 using Voyage_Engine.Rendere_Engine.Vector;
+using Debug = Voyage_Engine.Console.Debug;
 
 namespace Voyage_Engine.Rendere_Engine
 {
@@ -71,13 +72,20 @@ namespace Voyage_Engine.Rendere_Engine
         private void RenderLoop()
         {
             OnBeforeFirstFrame?.Invoke();
+
+            Stopwatch stopwatch = new Stopwatch();    
             
             while (_renderLoopThread.IsAlive)
             {
+                stopwatch.Start();
                 OnBeforeFrame?.Invoke();
 
                 _window.BeginInvoke((MethodInvoker) delegate { _window.Refresh(); });
                 Thread.Sleep(1);
+                
+                stopwatch.Stop();
+                Time.SetDeltaTime(stopwatch.ElapsedMilliseconds);
+                stopwatch.Reset();
                 
                 OnAfterFrame?.Invoke();
             }

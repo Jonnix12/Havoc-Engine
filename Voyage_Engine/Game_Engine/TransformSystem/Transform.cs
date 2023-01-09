@@ -6,26 +6,26 @@ namespace Voyage_Engine.Game_Engine.TransformSystem
 {
     public class Transform : Node
     {
-        private Vector2 _position;
-        private Vector2 _scale;
+        private float _positionX;
+        private float _positionY;
+        private float _scaleX;
+        private float _scaleY;
+        
         private GameObject _gameObject;
 
-        public Vector2 Position
-        {
-            get => _position;
-            set => _position = value;
-        }
-
+        public Vector2 Position => new Vector2(_positionX, _positionY);
+        public Vector2 Scale => new Vector2(_scaleX, _scaleY);
+        
         public GameObject GameObject => _gameObject;
-
-        public Vector2 Scale => _scale;
-
+        
         public bool HaveChildren => Children.Count == 0;
 
         public Transform()
         {
-            _position = Vector2.One;
-            _scale = Vector2.One;
+            _positionX = 0;
+            _positionY = 0;
+            _scaleX = 0;
+            _scaleY = 0;
         }
 
         public Transform(Transform parent)
@@ -35,21 +35,29 @@ namespace Voyage_Engine.Game_Engine.TransformSystem
 
         public Transform(Vector2 position, Vector2 scale)
         {
-            _position = position;
-            _scale = scale;
+            _positionX = position.X;
+            _positionY = position.Y;
+            _scaleX = scale.X;
+            _scaleY = scale.Y;
             SetParent(MainGameEngine.RootTransform);
         }
         
         public Transform(Vector2 position, Vector2 scale, Transform parent)
         {
-            _position = position;
-            _scale = scale;
+            _positionX = position.X;
+            _positionY = position.Y;
+            _scaleX = scale.X;
+            _scaleY = scale.Y;
             SetParent(parent);
         }
 
         public void MoveTowards(Vector2 destination)
         {
-            
+            while (!Position.Equals(destination))
+            {
+                _positionX += destination.X * (float)Time.DeltaTime;
+                _positionY += destination.Y * (float)Time.DeltaTime;
+            }
         }
 
         public void SetGameObject(GameObject gameObject)
