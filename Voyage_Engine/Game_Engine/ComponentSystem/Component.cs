@@ -1,10 +1,11 @@
-﻿using Voyage_Engine.Console;
+﻿using System;
+using Voyage_Engine.Console;
 using Voyage_Engine.Game_Engine.GameObjectSystem;
 using Voyage_Engine.Game_Engine.TransformSystem;
 
 namespace Voyage_Engine.Game_Engine.ComponentSystem
 {
-    public class Component : BaseObject , IComponent
+    public abstract class Component : BaseObject , IComponent, IDisposable
     {
         private Transform _transform;
         private GameObject _gameObject;
@@ -13,10 +14,7 @@ namespace Voyage_Engine.Game_Engine.ComponentSystem
 
         public GameObject GameObject => _gameObject;
 
-        public void Dispose()
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract void Dispose();
 
         public virtual void InitComponent(GameObject gameObject)
         {
@@ -28,6 +26,7 @@ namespace Voyage_Engine.Game_Engine.ComponentSystem
 
         public virtual void UpdateComponent()
         {
+
         }
     }
 }
