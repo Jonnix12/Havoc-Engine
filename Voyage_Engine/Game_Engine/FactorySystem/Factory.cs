@@ -5,7 +5,7 @@ using Voyage_Engine.Rendere_Engine.Vector;
 
 namespace Voyage_Engine.Game_Engine.FactorySystem
 {
-    public static class Factory
+    public static class Factory 
     {
         private static Transform _rootTransform = MainGameEngine.RootTransform;
         

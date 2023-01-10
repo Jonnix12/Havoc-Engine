@@ -7,6 +7,11 @@ namespace Voyage_Engine.Game_Engine.Objects
 {
     public class Warrior : GameObject
     {
+        public override void Dispose()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public override void Start()
         {
             Debug.Log(Application.StartupPath);

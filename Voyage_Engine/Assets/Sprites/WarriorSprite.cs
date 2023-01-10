@@ -6,5 +6,10 @@ namespace Voyage_Engine.Assest.Sprites
     {
         protected override string Path =>
             "/Sprites/png-transparent-the-woman-warrior-female-woman-warrior-game-child-cg-artwork-thumbnail.png";
+
+        public override void Dispose()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

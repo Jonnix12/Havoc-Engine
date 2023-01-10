@@ -58,6 +58,8 @@
     <Compile Include="Game_Engine\SceneSystem\Scene.cs" />
     <Compile Include="Game_Engine\TransformSystem\Node.cs" />
     <Compile Include="Game_Engine\TransformSystem\Transform.cs" />
+    <Compile Include="Physics_Engine\Collision\Collider.cs" />
+    <Compile Include="Physics_Engine\Collision\Collision.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Render_Engine\MainRenderEngine.cs">

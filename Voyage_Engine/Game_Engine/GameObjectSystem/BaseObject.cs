@@ -1,4 +1,5 @@
 ﻿
+using System;
 using Voyage_Engine.Game_Engine.Engine;
 
 namespace Voyage_Engine.Game_Engine.GameObjectSystem
@@ -8,6 +9,7 @@ namespace Voyage_Engine.Game_Engine.GameObjectSystem
         private int _instanceID = -1;
 
         public int InstanceId => _instanceID;
+
 
         protected void InitializedBaseObject()
         {
