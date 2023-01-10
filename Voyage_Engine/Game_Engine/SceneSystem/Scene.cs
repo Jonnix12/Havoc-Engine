@@ -9,25 +9,30 @@ namespace Voyage_Engine.Game_Engine.SceneSystem
         public Transform RootTransform => _rootTransform;
 
         public abstract int BuildIndex { get; }
+        public abstract string Name { get; }
 
-        public Scene()
+        public  bool  IsLoaded { get; private set; }
+
+        protected Scene()
         {
             _rootTransform = new Transform();
         }
         
-        public virtual void StartScene()
+        public virtual void StartScene() //start scene
         {
             StartChildren(RootTransform);
+            IsLoaded = true;
         }
 
-        public virtual void UpdateScene()
+        public virtual void UpdateScene() //update scene
         {
             UpdateChildren(RootTransform);
+            
         }
 
-        public virtual void EndScene()
+        public virtual void EndScene() //end scene
         {
-            
+            IsLoaded = false;
         }
         
         private static void StartChildren(Transform transform)
@@ -54,6 +59,10 @@ namespace Voyage_Engine.Game_Engine.SceneSystem
                     StartChildren(child);
                 }
             }
+        }
+        public override int GetHashCode()
+        {
+            return BuildIndex;
         }
     }
 }

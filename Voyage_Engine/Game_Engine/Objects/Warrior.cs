@@ -1,7 +1,9 @@
-﻿using Voyage_Engine.Assest.Sprites;
+﻿using System.Windows.Forms;
+using Voyage_Engine.Assest.Sprites;
 using Voyage_Engine.Console;
 using Voyage_Engine.Game_Engine.GameObjectSystem;
 using Voyage_Engine.Game_Engine.InputSystem;
+using Voyage_Engine.Game_Engine.SceneSystem;
 using Voyage_Engine.Rendere_Engine.Vector;
 
 namespace Voyage_Engine.Game_Engine.Objects
@@ -18,9 +20,10 @@ namespace Voyage_Engine.Game_Engine.Objects
 
         public override void Update()
         {
-            //Debug.Log(Time.DeltaTime);
-            
-            //Transform.MoveTowards(new Vector2(1000,1000));
+            if (InputReceiver.IsKeyPress(Keys.F))
+            {
+                SceneManager.SetSceneByIndex(1);
+            }
             base.Update();
         }
 

@@ -12,7 +12,7 @@ namespace Voyage_Engine.Rendere_Engine.Sprite
         private bool _isInitialized;
         protected abstract string Path { get; } 
         
-        protected SpriteRenderer()
+        protected SpriteRenderer() : base()
         {
             try
             {

@@ -8,6 +8,7 @@ namespace Voyage_Engine.Assest.Scenes
     public class MainScene : Scene
     {
         public override int BuildIndex => 0;
+        public override string Name => "MainScene";
 
         public override void StartScene()
         {

@@ -48,6 +48,11 @@ namespace Voyage_Engine.Rendere_Engine.Vector
             return (float)Math.Sqrt(Math.Pow(a, 2) + Math.Pow(b, 2));
         }
 
+        public void MoveTowards(Vector2 current, Vector2 destination, float maxDistanceDelta)
+        {
+            
+        }
+
         public override string ToString()
         {
             return $" X:{X},Y:{Y} ";

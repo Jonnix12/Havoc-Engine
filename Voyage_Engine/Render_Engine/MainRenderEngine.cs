@@ -97,8 +97,10 @@ namespace Voyage_Engine.Rendere_Engine
             
             graphics.Clear(Color.Aqua);
 
-            foreach (var renderable in _renderObjects)
-                renderable.Render(graphics);
+            for (int i = 0; i < _renderObjects.Count; i++)
+            {
+                _renderObjects[i].Render(graphics);
+            }
         }
 
         public static void RegisterObject(IRenderable renderable)

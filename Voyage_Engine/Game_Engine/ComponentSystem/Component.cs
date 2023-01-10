@@ -1,5 +1,4 @@
-﻿using Voyage_Engine.Console;
-using Voyage_Engine.Game_Engine.GameObjectSystem;
+﻿using Voyage_Engine.Game_Engine.GameObjectSystem;
 using Voyage_Engine.Game_Engine.TransformSystem;
 
 namespace Voyage_Engine.Game_Engine.ComponentSystem

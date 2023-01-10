@@ -55,8 +55,7 @@ namespace Voyage_Engine.Game_Engine.TransformSystem
         {
             while (!Position.Equals(destination))
             {
-                _positionX += destination.X * (float)Time.DeltaTime;
-                _positionY += destination.Y * (float)Time.DeltaTime;
+                
             }
         }
 

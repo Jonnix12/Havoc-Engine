@@ -42,6 +42,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Assets\Scenes\MainScene.cs" />
+        <Compile Include="Assets\Scenes\NewScene.cs" />
         <Compile Include="Assets\Sprites\WarriorSprite.cs" />
         <Compile Include="Console\Debug.cs" />
         <Compile Include="Console\TokenMachine\TokenMachine.cs" />
@@ -58,6 +59,7 @@
         <Compile Include="Game_Engine\Objects\Warrior.cs" />
         <Compile Include="Game_Engine\ResourcesSystem\Resources.cs" />
         <Compile Include="Game_Engine\SceneSystem\Scene.cs" />
+        <Compile Include="Game_Engine\SceneSystem\SceneManager.cs" />
         <Compile Include="Game_Engine\TransformSystem\Node.cs" />
         <Compile Include="Game_Engine\TransformSystem\Transform.cs" />
         <Compile Include="Program.cs" />
