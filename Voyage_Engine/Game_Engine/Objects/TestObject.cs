@@ -16,10 +16,7 @@ namespace Voyage_Engine.Game_Engine.Objects
 
         public override void Update()
         {
-            for (int i = 0; i < 1000000000; i++)
-            {
-                num = num / 2;
-            }
+            
             base.Update();
         }
     }
