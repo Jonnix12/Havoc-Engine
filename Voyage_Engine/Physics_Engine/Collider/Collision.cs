@@ -11,16 +11,19 @@ using Voyage_Engine.Game_Engine.GameObjectSystem;
 
 namespace Voyage_Engine.Physics_Engine.Collision
 {
-    internal class Collider : Component
+    public class Collider : Component
     {
-        private Bounds _bounds;
-
         Line[] lines = new Line[4];
 
         public Line UpperLine => lines[0];
         public Line LeftLine => lines[1];
         public Line RightLine => lines[2];
         public Line BottomLine => lines[3];
+
+        public Collider()
+        {
+
+        }
 
         public Collider(Transform transform)
         {

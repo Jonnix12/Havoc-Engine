@@ -7,7 +7,7 @@ using Voyage_Engine.Rendere_Engine.Vector;
 
 namespace Voyage_Engine.Physics_Engine.Collision
 {
-    internal class Line
+    public class Line
     {
         private string _lineName;
         private Vector2 _pointA;
