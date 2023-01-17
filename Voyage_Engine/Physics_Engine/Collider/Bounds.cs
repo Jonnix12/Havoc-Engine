@@ -14,6 +14,5 @@ namespace Voyage_Engine.Physics_Engine.Collision
         private Vector2 _max;
         private Vector2 _min;
         private Vector2 _size;
-
     }
 }

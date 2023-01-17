@@ -14,6 +14,9 @@ namespace Voyage_Engine.Physics_Engine.Collision
         private Vector2 _pointB;
         private float _distance;
 
+        public string LineName => _lineName;
+        public float Distance => _distance;
+
         public Line(string lineName, Vector2 pointA, Vector2 pointB) 
         { 
             _lineName = lineName;
