@@ -20,10 +20,13 @@ namespace Voyage_Engine.Game_Engine.Objects
 
         public override void Update()
         {
-            if (InputReceiver.IsKeyPress(Keys.F))
+            if (InputReceiver.IsKeyDown(Keys.F))
             {
-                SceneManager.SetSceneByIndex(1);
+                SceneManager.NextScene();
             }
+            
+            
+            Transform.MoveTowards(new Vector2(50,500),3);
             base.Update();
         }
 

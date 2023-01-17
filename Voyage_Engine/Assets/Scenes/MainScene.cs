@@ -13,7 +13,7 @@ namespace Voyage_Engine.Assest.Scenes
         public override void StartScene()
         {
             var gameObject = Factory.Instantiate<Warrior>(new Vector2(50,50),new Vector2(100,100));
-            var gameObject2 = Factory.Instantiate<TestObject>(new Vector2(300,300),new Vector2(100,100));
+            var gameObject2 = Factory.Instantiate<TestObject>(new Vector2(500,50),new Vector2(100,100));
             
             base.StartScene();
         }

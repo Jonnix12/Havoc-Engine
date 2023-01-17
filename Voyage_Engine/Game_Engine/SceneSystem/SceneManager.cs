@@ -62,7 +62,7 @@ namespace Voyage_Engine.Game_Engine.SceneSystem
 
         public static void NextScene() //move to next scene
         {
-            if (_currentScene == null)
+            if (_currentScene != null)
                     _currentScene.EndScene();
             _sceneIndex++;
             
@@ -78,8 +78,8 @@ namespace Voyage_Engine.Game_Engine.SceneSystem
 
         public static void SetSceneByIndex(int sceneIndex) //set scene by index 
         {
-            if (_currentScene == null)
-                _currentScene.EndScene();
+            if (_currentScene != null)
+                  _currentScene.EndScene();
             
             if (!ValidateSceneIndex(sceneIndex))
                 return;

@@ -43,6 +43,7 @@
     <ItemGroup>
         <Compile Include="Assets\Scenes\MainScene.cs" />
         <Compile Include="Assets\Scenes\NewScene.cs" />
+        <Compile Include="Assets\Sprites\TriangulSprite.cs" />
         <Compile Include="Assets\Sprites\WarriorSprite.cs" />
         <Compile Include="Console\Debug.cs" />
         <Compile Include="Console\TokenMachine\TokenMachine.cs" />
@@ -79,7 +80,9 @@
       <Folder Include="Resources" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Resources\Sprites\Frame_13.png" />
       <Content Include="Resources\Sprites\png-transparent-the-woman-warrior-female-woman-warrior-game-child-cg-artwork-thumbnail.png" />
+      <Content Include="Resources\Sprites\triangle-png-42408.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

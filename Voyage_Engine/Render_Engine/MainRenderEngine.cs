@@ -105,7 +105,15 @@ namespace Voyage_Engine.Rendere_Engine
 
         public static void RegisterObject(IRenderable renderable)
         {
+            if (_renderObjects.Contains(renderable))
+                return;
+            
             _renderObjects.Add(renderable);
+        }
+        
+        public static void UnRegisterObject(IRenderable renderable)
+        {
+            _renderObjects.Remove(renderable);
         }
 
         private void StartRenderLoop(object sender, EventArgs e)

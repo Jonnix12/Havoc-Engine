@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Runtime.InteropServices;
+﻿using System;
+using System.Collections.Generic;
 using Voyage_Engine.Game_Engine.ComponentSystem;
 using Voyage_Engine.Game_Engine.FactorySystem;
 using Voyage_Engine.Game_Engine.TransformSystem;
 
 namespace Voyage_Engine.Game_Engine.GameObjectSystem
 {
-    public class GameObject : BaseObject , IInstantiate , IGameObject
+    public class GameObject : BaseObject , IInstantiate , IGameObject , IDisposable
     {
         private string _name;
         private Transform _transform;
@@ -66,6 +66,12 @@ namespace Voyage_Engine.Game_Engine.GameObjectSystem
         public virtual void LateUpdate()
         {
             
+        }
+
+        public void Dispose()
+        {
+            foreach (var component in _components)
+                component.Dispose();
         }
     }
 }

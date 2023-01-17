@@ -1,8 +1,9 @@
-﻿using Voyage_Engine.Game_Engine.TransformSystem;
+﻿using System;
+using Voyage_Engine.Game_Engine.TransformSystem;
 
 namespace Voyage_Engine.Game_Engine.SceneSystem
 {
-    public abstract class Scene
+    public abstract class Scene : IDisposable
     {
         private Transform _rootTransform;
 
@@ -32,10 +33,11 @@ namespace Voyage_Engine.Game_Engine.SceneSystem
 
         public virtual void EndScene() //end scene
         {
+            Dispose();
             IsLoaded = false;
         }
         
-        private static void StartChildren(Transform transform)
+        private void StartChildren(Transform transform)
         {
             foreach (var child in transform.Children)
             {
@@ -48,7 +50,7 @@ namespace Voyage_Engine.Game_Engine.SceneSystem
             }
         }
         
-        private static void UpdateChildren(Transform transform)
+        private  void UpdateChildren(Transform transform)
         {
             foreach (var child in transform.Children)
             {
@@ -56,13 +58,25 @@ namespace Voyage_Engine.Game_Engine.SceneSystem
                 
                 if (child.HaveChildren)
                 {
-                    StartChildren(child);
+                    UpdateChildren(child);
                 }
             }
         }
+        
         public override int GetHashCode()
         {
             return BuildIndex;
+        }
+
+        public void Dispose()
+        {
+            foreach (var child in _rootTransform.Children)
+            {
+                if (child.HaveChildren)
+                {
+                    child.GameObject.Dispose();
+                }
+            }
         }
     }
 }

@@ -12,9 +12,8 @@ namespace Voyage_Engine.Game_Engine.ComponentSystem
 
         public GameObject GameObject => _gameObject;
 
-        public void Dispose()
+        public virtual void Dispose()
         {
-            throw new System.NotImplementedException();
         }
 
         public virtual void InitComponent(GameObject gameObject)
