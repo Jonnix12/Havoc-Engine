@@ -1,96 +1,96 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{604259B1-996D-456E-90CA-B826B69B3121}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Voyage_Engine</RootNamespace>
-    <AssemblyName>Voyage_Engine</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\Scenes\MainScene.cs" />
-    <Compile Include="Assets\Sprites\WarriorSprite.cs" />
-    <Compile Include="Console\Debug.cs" />
-    <Compile Include="Console\TokenMachine\TokenMachine.cs" />
-    <Compile Include="Game_Engine\ComponentSystem\Component.cs" />
-    <Compile Include="Game_Engine\ComponentSystem\IComponent.cs" />
-    <Compile Include="Game_Engine\Engine\InstanceIDGenerator.cs" />
-    <Compile Include="Game_Engine\Engine\MainGameEngine.cs" />
-    <Compile Include="Game_Engine\GameObjectSystem\BaseObject.cs" />
-    <Compile Include="Game_Engine\GameObjectSystem\GameObject.cs" />
-    <Compile Include="Game_Engine\GameObjectSystem\IGameObject.cs" />
-    <Compile Include="Game_Engine\InputSystem\InputReceiver.cs" />
-    <Compile Include="Game_Engine\FactorySystem\Factory.cs" />
-    <Compile Include="Game_Engine\Objects\TestObject.cs" />
-    <Compile Include="Game_Engine\Objects\Warrior.cs" />
-    <Compile Include="Game_Engine\ResourcesSystem\Resources.cs" />
-    <Compile Include="Game_Engine\SceneSystem\Scene.cs" />
-    <Compile Include="Game_Engine\TransformSystem\Node.cs" />
-    <Compile Include="Game_Engine\TransformSystem\Transform.cs" />
-    <Compile Include="Physics_Engine\BasePhysicsComponent\BasePhysicsComponent.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Physics_Engine\Collider\Bounds.cs" />
-    <Compile Include="Physics_Engine\Collider\Collision.cs" />
-    <Compile Include="Physics_Engine\Collider\Line.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Render_Engine\MainRenderEngine.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Render_Engine\RenderObjects\RenderObject.cs" />
-    <Compile Include="Render_Engine\Sprite\SpriteRenderer.cs" />
-    <Compile Include="Render_Engine\Vector\Vector2.cs" />
-    <Compile Include="Time\Time.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Render_Engine\MainRenderEngine.resx">
-      <DependentUpon>MainRenderEngine.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="Resources\Sprites\png-transparent-the-woman-warrior-female-woman-warrior-game-child-cg-artwork-thumbnail.png" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{604259B1-996D-456E-90CA-B826B69B3121}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>Voyage_Engine</RootNamespace>
+        <AssemblyName>Voyage_Engine</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Windows.Forms" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Assets\Scenes\MainScene.cs" />
+        <Compile Include="Assets\Scenes\NewScene.cs" />
+        <Compile Include="Assets\Sprites\TriangulSprite.cs" />
+        <Compile Include="Assets\Sprites\WarriorSprite.cs" />
+        <Compile Include="Console\Debug.cs" />
+        <Compile Include="Console\TokenMachine\TokenMachine.cs" />
+        <Compile Include="Game_Engine\ComponentSystem\Component.cs" />
+        <Compile Include="Game_Engine\ComponentSystem\IComponent.cs" />
+        <Compile Include="Game_Engine\Engine\InstanceIDGenerator.cs" />
+        <Compile Include="Game_Engine\Engine\MainGameEngine.cs" />
+        <Compile Include="Game_Engine\GameObjectSystem\BaseObject.cs" />
+        <Compile Include="Game_Engine\GameObjectSystem\GameObject.cs" />
+        <Compile Include="Game_Engine\GameObjectSystem\IGameObject.cs" />
+        <Compile Include="Game_Engine\InputSystem\InputReceiver.cs" />
+        <Compile Include="Game_Engine\FactorySystem\Factory.cs" />
+        <Compile Include="Game_Engine\Objects\TestObject.cs" />
+        <Compile Include="Game_Engine\Objects\Warrior.cs" />
+        <Compile Include="Game_Engine\ResourcesSystem\Resources.cs" />
+        <Compile Include="Game_Engine\SceneSystem\Scene.cs" />
+        <Compile Include="Game_Engine\SceneSystem\SceneManager.cs" />
+        <Compile Include="Game_Engine\TransformSystem\Node.cs" />
+        <Compile Include="Game_Engine\TransformSystem\Transform.cs" />
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Render_Engine\MainRenderEngine.cs" />
+        <Compile Include="Render_Engine\RenderObjects\RenderObject.cs" />
+        <Compile Include="Render_Engine\Sprite\SpriteRenderer.cs" />
+        <Compile Include="Render_Engine\Vector\Vector2.cs" />
+        <Compile Include="Time\Time.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="Render_Engine\MainRenderEngine.resx">
+        <DependentUpon>MainRenderEngine.cs</DependentUpon>
+      </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Resources" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Resources\Sprites\Frame_13.png" />
+      <Content Include="Resources\Sprites\png-transparent-the-woman-warrior-female-woman-warrior-game-child-cg-artwork-thumbnail.png" />
+      <Content Include="Resources\Sprites\triangle-png-42408.png" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
     </Target>
     <Target Name="AfterBuild">
     </Target>
     -->
+
 </Project>

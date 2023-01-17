@@ -13,8 +13,27 @@ namespace Voyage_Engine.Game_Engine.TransformSystem
         
         private GameObject _gameObject;
 
-        public Vector2 Position => new Vector2(_positionX, _positionY);
-        public Vector2 Scale => new Vector2(_scaleX, _scaleY);
+        public Vector2 Position
+        {
+            get => new Vector2(_positionX, _positionY);
+            
+            set
+            {
+                _positionX = value.X;
+                _positionY = value.Y;
+            }
+        }
+        
+        public Vector2 Scale
+        {
+            get => new Vector2(_scaleX, _scaleY);
+            
+            set
+            {
+                _scaleX = value.X;
+                _scaleY = value.Y;
+            }
+        }
         
         public GameObject GameObject => _gameObject;
         
@@ -51,13 +70,9 @@ namespace Voyage_Engine.Game_Engine.TransformSystem
             SetParent(parent);
         }
 
-        public void MoveTowards(Vector2 destination)
+        public void MoveTowards(Vector2 destination,float maxDistanceDelta)
         {
-            while (!Position.Equals(destination))
-            {
-                _positionX += destination.X * (float)Time.DeltaTime;
-                _positionY += destination.Y * (float)Time.DeltaTime;
-            }
+            Position = Vector2.MoveTowards(Position, destination, maxDistanceDelta);
         }
 
         public void SetGameObject(GameObject gameObject)

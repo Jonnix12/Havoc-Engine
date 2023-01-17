@@ -9,7 +9,13 @@ namespace Voyage_Engine.Rendere_Engine.RenderedObjects
         {
             MainRenderEngine.RegisterObject(this);
         }
-        
+
+        public override void Dispose()
+        {
+            MainRenderEngine.UnRegisterObject(this);
+            base.Dispose();
+        }
+
         public abstract void Render(Graphics graphics);
     }
 

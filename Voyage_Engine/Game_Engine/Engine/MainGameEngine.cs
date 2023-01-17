@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
-using Voyage_Engine.Assest.Scenes;
 using Voyage_Engine.Game_Engine.InputSystem;
 using Voyage_Engine.Game_Engine.ResourcesSystem;
 using Voyage_Engine.Game_Engine.SceneSystem;
@@ -20,11 +17,7 @@ namespace Voyage_Engine.Game_Engine.Engine
 
         private MainRenderEngine _mainRenderEngine;
         
-        private static List<Scene> _scenes;
-
-        private static Scene _currentScene;
-
-        public static Scene CurrentScene => _currentScene;
+        public static Scene CurrentScene => SceneManager.CurrentScene;
 
         public static Transform RootTransform => CurrentScene.RootTransform;
 
@@ -36,8 +29,6 @@ namespace Voyage_Engine.Game_Engine.Engine
             _mainRenderEngine = new MainRenderEngine(new Vector2(1000, 1000), "Voyage Engine");
             _input = new InputReceiver(_mainRenderEngine.Window);
             _resources = new Resources();
-
-            _scenes = new List<Scene>();
             
             _mainRenderEngine.OnBeforeFrame += Update;
             _mainRenderEngine.OnBeforeFirstFrame += Start;
@@ -47,24 +38,17 @@ namespace Voyage_Engine.Game_Engine.Engine
             
             _mainRenderEngine.OpenWindow();
         }
-        
-        public static void RegisterScene(Scene scene)
-        {
-            _scenes.Add(scene);
-        }
 
         private static void Start()
         {
-            var scene = _scenes.OrderBy(x => x.BuildIndex);
-
-            _currentScene = new MainScene();
+            SceneManager.SetFirstScene();
             
-            _currentScene.StartScene();
+            SceneManager.CurrentScene.StartScene();
         }
 
         private static void Update()
         {
-           _currentScene.UpdateScene();
+            SceneManager.CurrentScene.UpdateScene();
         }
 
         private static void LateUpdate()
