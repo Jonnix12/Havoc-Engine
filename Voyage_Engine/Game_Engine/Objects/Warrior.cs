@@ -15,6 +15,7 @@ namespace Voyage_Engine.Game_Engine.Objects
         {
             AddComponent<WarriorSprite>();
             AddComponent<Collider>();
+            //AddComponent<InputSystem.Button>();
             var d = Vector2.Distance(Transform.Position, new Vector2(70, 70));
             Debug.Log(d);
             base.Start();

@@ -54,6 +54,7 @@
     <Compile Include="Game_Engine\GameObjectSystem\BaseObject.cs" />
     <Compile Include="Game_Engine\GameObjectSystem\GameObject.cs" />
     <Compile Include="Game_Engine\GameObjectSystem\IGameObject.cs" />
+    <Compile Include="Game_Engine\InputSystem\Button.cs" />
     <Compile Include="Game_Engine\InputSystem\InputReceiver.cs" />
     <Compile Include="Game_Engine\FactorySystem\Factory.cs" />
     <Compile Include="Game_Engine\Objects\TestObject.cs" />
@@ -67,7 +68,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Physics_Engine\Collider\Bounds.cs" />
-    <Compile Include="Physics_Engine\Collider\Collision.cs" />
+    <Compile Include="Physics_Engine\Collider\Collider.cs" />
     <Compile Include="Physics_Engine\Collider\Line.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

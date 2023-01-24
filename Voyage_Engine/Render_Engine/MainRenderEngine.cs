@@ -18,8 +18,20 @@ namespace Voyage_Engine.Rendere_Engine
             KeyPreview = true;
             DoubleBuffered = true;
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Canves
+            // 
+            this.ClientSize = new System.Drawing.Size(946, 773);
+            this.Name = "Canves";
+            this.ResumeLayout(false);
+
+        }
     }
-    
+
     public class MainRenderEngine
     {
         public event Action OnBeforeFirstFrame;
