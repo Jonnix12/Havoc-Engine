@@ -6,17 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c6b8ec35-9de2-4d67-8d5b-d4fbe620a90b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Voyage_Engine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Voyage_Engine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Voyage_Engine/Assets/Scenes/MainScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/Assets/Scenes/MainScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/Engine/MainGameEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/Engine/MainGameEngine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/Objects/TestObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/Objects/TestObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/Objects/Warrior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/Objects/Warrior.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/TileMap/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/TileMap/Tile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/TileMap/TileMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/TileMap/TileMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Voyage_Engine/Voyage_Engine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/Voyage_Engine.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Voyage_Engine/bin/Debug/Voyage_Engine.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/bin/Debug/Voyage_Engine.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Voyage_Engine/bin/Debug/Voyage_Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/bin/Debug/Voyage_Engine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Voyage_Engine/obj/Debug/Voyage_Engine.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/obj/Debug/Voyage_Engine.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Voyage_Engine/obj/Debug/Voyage_Engine.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/obj/Debug/Voyage_Engine.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Voyage_Engine/obj/Debug/Voyage_Engine.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/obj/Debug/Voyage_Engine.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Voyage_Engine/obj/Debug/Voyage_Engine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/obj/Debug/Voyage_Engine.pdb" afterDir="false" />
     </list>
@@ -101,7 +94,7 @@
       <workItem from="1673359380726" duration="791000" />
       <workItem from="1673782403552" duration="8141000" />
       <workItem from="1674557691977" duration="558000" />
-      <workItem from="1674558761127" duration="5355000" />
+      <workItem from="1674558761127" duration="5748000" />
     </task>
     <servers />
   </component>
