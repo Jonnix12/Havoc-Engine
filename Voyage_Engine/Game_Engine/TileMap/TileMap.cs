@@ -31,7 +31,7 @@ namespace Voyage_Engine.Game_Engine.TileMap
 
                     if (j < height -1)
                     {
-                        color = color == Color.Wheat ? Color.Black : Color.Wheat;
+                        color = color == Color.Wheat ? Color.Brown : Color.Wheat;
                     }
                     
                     posY += tileSize.Y;

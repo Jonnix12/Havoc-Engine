@@ -34,7 +34,7 @@ namespace Voyage_Engine.Game_Engine.TileMap
             _tileObject = gameObject;
 
             _tileObject.Transform.Position = _pos;
-            _tileObject.Transform.Scale = _size;
+            _tileObject.Transform.Scale = _size * 0.75f;
 
             return true;
         }
