@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c6b8ec35-9de2-4d67-8d5b-d4fbe620a90b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/GameObjectSystem/GameObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/Game_Engine/GameObjectSystem/GameObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Voyage_Engine/obj/Debug/Voyage_Engine.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Voyage_Engine/obj/Debug/Voyage_Engine.csproj.AssemblyReference.cache" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/861e23c672704a4a8eca9c234af0cac552e590/df/8e4433df/StringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/07/55758114/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/23/429fdc6f/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/4e/0676dd15/StringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/c2/55982785/Activator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Voyage_Engine/Console/TokenMachine/TokenMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Voyage_Engine/Game_Engine/Objects/TestObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Voyage_Engine/Time/Time.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2J0As8YKedt9oa4IQUXJRuO1blk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.5004995&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Voyage_Engine" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Voyage_Engine/bin/Debug/Voyage_Engine.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Voyage_Engine/bin/Debug" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="1" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Voyage_Engine/Voyage_Engine.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.8" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6b8ec35-9de2-4d67-8d5b-d4fbe620a90b" name="Changes" comment="" />
+      <created>1671204835099</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671204835099</updated>
+      <workItem from="1671204838622" duration="2951000" />
+      <workItem from="1671277000245" duration="6532000" />
+      <workItem from="1671716148716" duration="3456000" />
+      <workItem from="1672585433554" duration="1207000" />
+      <workItem from="1672742189885" duration="8476000" />
+      <workItem from="1673023418961" duration="1994000" />
+      <workItem from="1673090841531" duration="2596000" />
+      <workItem from="1673189342855" duration="10852000" />
+      <workItem from="1673359380726" duration="791000" />
+      <workItem from="1673782403552" duration="8141000" />
+      <workItem from="1674557691977" duration="558000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Voyage_Engine/Game_Engine/SceneSystem/SceneManager.cs</url>
+          <line>81</line>
+          <properties documentPath="C:\Users\jonha\Documents\GitHub\C#\Voyage--Engine\Voyage_Engine\Game_Engine\SceneSystem\SceneManager.cs" initialLine="81" containingFunctionPresentation="method 'SetSceneByIndex'">
+            <startOffsets>
+              <option value="2340" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2365" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Voyage_Engine/Game_Engine/SceneSystem/Scene.cs</url>
+          <line>18</line>
+          <properties documentPath="C:\Users\jonha\Documents\GitHub\C#\Voyage--Engine\Voyage_Engine\Game_Engine\SceneSystem\Scene.cs" initialLine="18" containingFunctionPresentation="constructor 'Scene'">
+            <startOffsets>
+              <option value="464" />
+            </startOffsets>
+            <endOffsets>
+              <option value="497" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Voyage_Engine/Assets/Scenes/NewScene.cs</url>
+          <line>14</line>
+          <properties documentPath="C:\Users\jonha\Documents\GitHub\C#\Voyage--Engine\Voyage_Engine\Assets\Scenes\NewScene.cs" initialLine="14" containingFunctionPresentation="method 'StartScene'">
+            <startOffsets>
+              <option value="419" />
+            </startOffsets>
+            <endOffsets>
+              <option value="506" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
