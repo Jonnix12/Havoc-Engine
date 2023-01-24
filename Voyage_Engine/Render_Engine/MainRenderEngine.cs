@@ -7,6 +7,7 @@ using System.Threading;
 using System.Windows.Forms;
 using Voyage_Engine.Rendere_Engine.RenderedObjects;
 using Voyage_Engine.Rendere_Engine.Vector;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Debug = Voyage_Engine.Console.Debug;
 
 namespace Voyage_Engine.Rendere_Engine
@@ -28,7 +29,7 @@ namespace Voyage_Engine.Rendere_Engine
             this.ClientSize = new System.Drawing.Size(946, 773);
             this.Name = "Canves";
             this.ResumeLayout(false);
-
+            
         }
     }
 
@@ -43,13 +44,14 @@ namespace Voyage_Engine.Rendere_Engine
         
         private Vector2 _screenSize;
         private string _windowTitle;
-        private Canves _window;
+        private static  Canves _window;
         private Thread _renderLoopThread;
 
         private bool _sceneInitialized;
 
-        public Canves Window => _window;
+        public static Canves Window => _window;
 
+       
         public MainRenderEngine(Vector2 screenSize,string windowTitle)
         {
             _sceneInitialized = false;
@@ -60,7 +62,6 @@ namespace Voyage_Engine.Rendere_Engine
             _window = new Canves();
             _window.Size = new Size((int) _screenSize.X, (int) _screenSize.Y);
             _window.Text = _windowTitle;
-
             FileStream fileStream = File.Open(Application.StartupPath + "/Resources/Engine_Resources/Icon.ico",
                 FileMode.Open);
             _window.Icon =  new Icon(fileStream);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Remoting.Messaging;
 using System.Windows.Forms;
 using Voyage_Engine.Rendere_Engine;
 using Voyage_Engine.Rendere_Engine.Vector;
@@ -181,4 +182,19 @@ namespace Voyage_Engine.Game_Engine.InputSystem
         }
     }
 
+    public class ObjectInput : Control
+    {
+        public ObjectInput() : base()
+        {
+            CreateHandle();
+        }
+
+        protected override void CreateHandle()
+        {
+            base.CreateHandle();
+        }
+    }
 }
+
+
+
