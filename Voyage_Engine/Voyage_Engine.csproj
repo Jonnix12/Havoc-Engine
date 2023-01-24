@@ -61,6 +61,9 @@
         <Compile Include="Game_Engine\ResourcesSystem\Resources.cs" />
         <Compile Include="Game_Engine\SceneSystem\Scene.cs" />
         <Compile Include="Game_Engine\SceneSystem\SceneManager.cs" />
+        <Compile Include="Game_Engine\TileMap\Tile.cs" />
+        <Compile Include="Game_Engine\TileMap\TileMap.cs" />
+        <Compile Include="Game_Engine\TileMap\TileObject.cs" />
         <Compile Include="Game_Engine\TransformSystem\Node.cs" />
         <Compile Include="Game_Engine\TransformSystem\Transform.cs" />
         <Compile Include="Program.cs" />
@@ -82,6 +85,7 @@
     <ItemGroup>
       <Content Include="Resources\Sprites\Frame_13.png" />
       <Content Include="Resources\Sprites\png-transparent-the-woman-warrior-female-woman-warrior-game-child-cg-artwork-thumbnail.png" />
+      <Content Include="Resources\Sprites\pngegg.png" />
       <Content Include="Resources\Sprites\triangle-png-42408.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

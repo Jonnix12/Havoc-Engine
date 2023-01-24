@@ -1,37 +1,50 @@
-﻿using Voyage_Engine.Game_Engine.GameObjectSystem;
+﻿using System.Drawing;
+using Voyage_Engine.Game_Engine.GameObjectSystem;
+using Voyage_Engine.Rendere_Engine.RenderedObjects;
 using Voyage_Engine.Rendere_Engine.Vector;
 
 namespace Voyage_Engine.Game_Engine.TileMap
 {
-    public abstract class Tile 
+    public class Tile : RenderObject
     {
-        Vector2 size;
-        Vector2 pos;
-        GameObject tileObject;
-        public int row { get; set; }
-        public int colm { get; set; }
+        public int Row { get; private set; }
+        public int Colm { get; private set; }
+        
+        private Vector2 _size;
+        private Vector2 _pos;
+        private Color _color;
+        private GameObject _tileObject;
 
-        public bool tryAssiagedGameObject(GameObject gameobject)
+        public Tile(int row,int colm,Vector2 pos,Vector2 size,Color color)
         {
-            if(tileObject != null)
+            Row = row;
+            Colm = colm;
+            _pos = pos;
+            _size = size;
+            _color = color;
+        }
+
+        public bool TryAssiagGameObject(GameObject gameObject)
+        {
+            if(_tileObject != null)
             {
                 return false;
             }
 
-            tileObject = gameobject;
+            _tileObject = gameObject;
 
-            tileObject.Transform.Position = pos;
-            tileObject.Transform.Scale = size;
+            _tileObject.Transform.Position = _pos;
+            _tileObject.Transform.Scale = _size;
 
             return true;
         }
 
         public GameObject RemoveTileObject()
         {
-            if(tileObject != null)
+            if(_tileObject != null)
             {
-                var cache = tileObject;
-                tileObject = null;
+                var cache = _tileObject;
+                _tileObject = null;
 
                 return cache;
             }
@@ -39,8 +52,10 @@ namespace Voyage_Engine.Game_Engine.TileMap
             return null;
         }
 
-      //  protected List<TileObject> objects;
-       
+        public override void Render(Graphics graphics)
+        {
+            graphics.FillRectangle(new SolidBrush(_color),_pos.X,_pos.Y,_size.X,_size.Y);
+        }
     }
 }
 

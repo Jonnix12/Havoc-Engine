@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Voyage_Engine.Game_Engine.InputSystem;
 using Voyage_Engine.Game_Engine.ResourcesSystem;
 using Voyage_Engine.Game_Engine.SceneSystem;
 using Voyage_Engine.Game_Engine.TransformSystem;
@@ -21,13 +20,13 @@ namespace Voyage_Engine.Game_Engine.Engine
 
         public static Transform RootTransform => CurrentScene.RootTransform;
 
-        private InputReceiver _input;
+        //private InputReceiver _input;
         private Resources _resources;
 
         public MainGameEngine()
         {
             _mainRenderEngine = new MainRenderEngine(new Vector2(1000, 1000), "Voyage Engine");
-            _input = new InputReceiver(_mainRenderEngine.Window);
+            //_input = new InputReceiver(_mainRenderEngine.Window);
             _resources = new Resources();
             
             _mainRenderEngine.OnBeforeFrame += Update;
@@ -63,7 +62,7 @@ namespace Voyage_Engine.Game_Engine.Engine
             _mainRenderEngine.OnCloseWindow -= ExitEngine;
             _mainRenderEngine.OnAfterFrame -= LateUpdate;
             
-            _input.Dispose();
+            //_input.Dispose();
         }
     }
 

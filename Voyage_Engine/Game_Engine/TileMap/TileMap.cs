@@ -1,26 +1,52 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Security.AccessControl;
+using System.Drawing;
+using Voyage_Engine.Rendere_Engine.Vector;
 
 namespace Voyage_Engine.Game_Engine.TileMap
 {
     public class TileMap : IEnumerable<Tile>
     {
+        private Vector2 _pos;
         private Tile[,] _gride;
         private int width;
         private int height;
 
-        public TileMap(int width, int height)
+        public TileMap(int width, int height,Vector2 tileSize)
         {
             this.width = width;
             this.height = height;
             _gride = new Tile[width, height];
+
+            float posX = 0;
+            float posY = 0;
+            
+            Color color = Color.Wheat;
+            
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < height; j++)
+                {
+                    _gride[i, j] = new Tile(i,j,new Vector2(posX,posY),tileSize,color);
+
+                    if (j < height -1)
+                    {
+                        color = color == Color.Wheat ? Color.Black : Color.Wheat;
+                    }
+                    
+                    posY += tileSize.Y;
+                    
+                }
+
+                posY = 0;
+                posX += tileSize.X;
+            }
         }
 
         public Tile this[int x, int y]
         {
-            get { return _gride[x, y]; }
-            set { _gride[x, y] = value; }
+            get => _gride[x, y];
+            set => _gride[x, y] = value;
         }
 
         public IEnumerator<Tile> GetEnumerator()

@@ -1,10 +1,7 @@
-﻿using System.Windows.Forms;
-using Voyage_Engine.Assest.Sprites;
+﻿using Voyage_Engine.Assest.Sprites;
 using Voyage_Engine.Console;
 using Voyage_Engine.Game_Engine.GameObjectSystem;
 using Voyage_Engine.Game_Engine.InputSystem;
-using Voyage_Engine.Game_Engine.SceneSystem;
-using Voyage_Engine.Rendere_Engine.Vector;
 
 namespace Voyage_Engine.Game_Engine.Objects
 {
@@ -13,20 +10,14 @@ namespace Voyage_Engine.Game_Engine.Objects
         public override void Start()
         {
             AddComponent<WarriorSprite>();
-            var d = Vector2.Distance(Transform.Position, new Vector2(70, 70));
-            Debug.Log(d);
+            //var d = Vector2.Distance(Transform.Position, new Vector2(70, 70));
+            Debug.Log("Hey");
             base.Start();
         }
 
         public override void Update()
         {
-            if (InputReceiver.IsKeyDown(Keys.F))
-            {
-                SceneManager.NextScene();
-            }
-            
-            
-            Transform.MoveTowards(new Vector2(50,500),3);
+            //Transform.MoveTowards(new Vector2(50,500),3);
             base.Update();
         }
 
