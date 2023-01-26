@@ -13,33 +13,35 @@ namespace Voyage_Engine.Game_Engine.InputSystem
 {
     public class Button : Component, IDisposable
     {
-        ObjectInput control;
+        private ObjectInput _objectInput;
         public override void InitComponent(GameObject gameObject)
         {
-            control = new ObjectInput();
-            control.CreateControl();
-            control.Enabled= true;
-            control.Visible = true;
-            System.Console.WriteLine(control.IsHandleCreated); 
-            control.Focus();
-            
-            if(control.CanFocus) { control.Focus(); }
+            _objectInput = new ObjectInput();
+           
             base.InitComponent(gameObject);
-            control.Width = (int)Transform.Scale.X;
-            control.Height = (int)Transform.Scale.Y;
-            control.Click += OnClick;
-            control.DoubleClick += OnDoubleClick;
-            control.MouseClick += OnMouseClick;
-            control.MouseHover += OnMouseHover;
+            _objectInput.Width = (int)Transform.Scale.X;
+            _objectInput.Height = (int)Transform.Scale.Y;
+
+            _objectInput.CreateControl();
+            _objectInput.Enabled = true;
+            _objectInput.Visible = true;
+            _objectInput.Show();
+
+            if (_objectInput.CanFocus) { _objectInput.Focus(); }
+
+            _objectInput.Click += OnClick;
+            _objectInput.DoubleClick += OnDoubleClick;
+            _objectInput.MouseClick += OnMouseClick;
+            _objectInput.MouseHover += OnMouseHover;
         }
 
         public override void UpdateComponent()
         {
             base.UpdateComponent();
-            control.Update();
+            _objectInput.Update();
             Point point = new Point((int)Transform.Position.X,(int)Transform.Position.Y);
 
-            control.Location = point;
+            _objectInput.Location = point;
         }
 
         public virtual void OnClick(object sender, EventArgs e)
@@ -64,10 +66,10 @@ namespace Voyage_Engine.Game_Engine.InputSystem
 
          void IDisposable.Dispose()
         {
-            control.Click -= OnClick;
-            control.DoubleClick -= OnDoubleClick;
-            control.MouseClick -= OnMouseClick;
-            control.MouseHover -= OnMouseHover;
+            _objectInput.Click -= OnClick;
+            _objectInput.DoubleClick -= OnDoubleClick;
+            _objectInput.MouseClick -= OnMouseClick;
+            _objectInput.MouseHover -= OnMouseHover;
         }
     }
 }

@@ -186,13 +186,9 @@ namespace Voyage_Engine.Game_Engine.InputSystem
     {
         public ObjectInput() : base()
         {
-            CreateHandle();
-        }
-
-        protected override void CreateHandle()
-        {
             base.CreateHandle();
         }
+
     }
 }
 
