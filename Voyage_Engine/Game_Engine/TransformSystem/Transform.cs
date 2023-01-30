@@ -13,28 +13,31 @@ namespace Voyage_Engine.Game_Engine.TransformSystem
         
         private GameObject _gameObject;
 
-        public Vector2 Position
-        {
-            get => new Vector2(_positionX, _positionY);
-            
-            set
+       
+        public Vector2 Position { 
+            get
+            {
+                return new Vector2(_positionX, _positionY);
+            } set
             {
                 _positionX = value.X;
                 _positionY = value.Y;
             }
         }
-        
+
         public Vector2 Scale
         {
-            get => new Vector2(_scaleX, _scaleY);
-            
+            get
+            {
+                return new Vector2(_scaleX, _scaleY);
+            }
             set
             {
                 _scaleX = value.X;
                 _scaleY = value.Y;
             }
         }
-        
+
         public GameObject GameObject => _gameObject;
         
         public bool HaveChildren => Children.Count == 0;

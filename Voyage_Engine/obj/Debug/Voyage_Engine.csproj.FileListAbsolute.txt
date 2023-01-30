@@ -33,12 +33,12 @@ D:\C# Project\Projects\Voyage _Engine\Voyage-Engine\Voyage_Engine\obj\Debug\Voya
 D:\C# Project\Projects\Voyage _Engine\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.CoreCompileInputs.cache
 D:\C# Project\Projects\Voyage _Engine\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.exe
 D:\C# Project\Projects\Voyage _Engine\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.pdb
-C:\Users\liadh\מסמכים\C#\Voyage-Engine\Voyage_Engine\bin\Debug\Voyage_Engine.exe
-C:\Users\liadh\מסמכים\C#\Voyage-Engine\Voyage_Engine\bin\Debug\Voyage_Engine.pdb
-C:\Users\liadh\מסמכים\C#\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.AssemblyReference.cache
-C:\Users\liadh\מסמכים\C#\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.SuggestedBindingRedirects.cache
-C:\Users\liadh\מסמכים\C#\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.Rendere_Engine.Canves.resources
-C:\Users\liadh\מסמכים\C#\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.GenerateResource.cache
-C:\Users\liadh\מסמכים\C#\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.CoreCompileInputs.cache
-C:\Users\liadh\מסמכים\C#\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.exe
-C:\Users\liadh\מסמכים\C#\Voyage-Engine\Voyage_Engine\obj\Debug\Voyage_Engine.pdb
+C:\Users\edgar\Desktop\Voyage--Engine\Voyage_Engine\bin\Debug\Voyage_Engine.exe
+C:\Users\edgar\Desktop\Voyage--Engine\Voyage_Engine\bin\Debug\Voyage_Engine.pdb
+C:\Users\edgar\Desktop\Voyage--Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.AssemblyReference.cache
+C:\Users\edgar\Desktop\Voyage--Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.SuggestedBindingRedirects.cache
+C:\Users\edgar\Desktop\Voyage--Engine\Voyage_Engine\obj\Debug\Voyage_Engine.Rendere_Engine.Canves.resources
+C:\Users\edgar\Desktop\Voyage--Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.GenerateResource.cache
+C:\Users\edgar\Desktop\Voyage--Engine\Voyage_Engine\obj\Debug\Voyage_Engine.csproj.CoreCompileInputs.cache
+C:\Users\edgar\Desktop\Voyage--Engine\Voyage_Engine\obj\Debug\Voyage_Engine.exe
+C:\Users\edgar\Desktop\Voyage--Engine\Voyage_Engine\obj\Debug\Voyage_Engine.pdb

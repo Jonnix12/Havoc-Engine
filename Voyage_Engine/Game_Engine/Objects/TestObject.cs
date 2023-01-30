@@ -1,6 +1,5 @@
 ﻿using Voyage_Engine.Assest.Sprites;
 using Voyage_Engine.Game_Engine.GameObjectSystem;
-using Voyage_Engine.Rendere_Engine.Vector;
 
 namespace Voyage_Engine.Game_Engine.Objects
 {
@@ -8,13 +7,14 @@ namespace Voyage_Engine.Game_Engine.Objects
     {
         public override void Start()
         {
-            AddComponent<TrianguleSprite>();
+            AddComponent<WhiteSprite>();
             base.Start();
         }
 
         public override void Update()
         {
-            Transform.MoveTowards(new Vector2(500,500),3);
+            //Transform.MoveTowards(new Vector2(500,500),3);
+            //Debug.Log(Time.DeltaTime);
             base.Update();
         }
     }
