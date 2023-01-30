@@ -13,11 +13,10 @@ namespace Voyage_Engine.Game_Engine.InputSystem
 {
     public class Button : Component, IDisposable
     {
-        private ObjectInput _objectInput;
+        private ObjectInput _objectInput = new ObjectInput();
+
         public override void InitComponent(GameObject gameObject)
         {
-            _objectInput = new ObjectInput();
-           
             base.InitComponent(gameObject);
             _objectInput.Width = (int)Transform.Scale.X;
             _objectInput.Height = (int)Transform.Scale.Y;
@@ -26,7 +25,7 @@ namespace Voyage_Engine.Game_Engine.InputSystem
             _objectInput.Enabled = true;
             _objectInput.Visible = true;
             _objectInput.Show();
-
+            MainRenderEngine.Windows.AddInputObject(_objectInput);
             if (_objectInput.CanFocus) { _objectInput.Focus(); }
 
             _objectInput.Click += OnClick;

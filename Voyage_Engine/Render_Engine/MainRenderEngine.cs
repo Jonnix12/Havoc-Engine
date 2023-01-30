@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
+using Voyage_Engine.Game_Engine.InputSystem;
 using Voyage_Engine.Rendere_Engine.RenderedObjects;
 using Voyage_Engine.Rendere_Engine.Vector;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -20,6 +21,11 @@ namespace Voyage_Engine.Rendere_Engine
             DoubleBuffered = true;
         }
 
+        public void AddInputObject(ObjectInput objectInput)
+        {
+            Controls.Add(objectInput);
+        }
+
         private void InitializeComponent()
         {
             this.SuspendLayout();
@@ -29,7 +35,6 @@ namespace Voyage_Engine.Rendere_Engine
             this.ClientSize = new System.Drawing.Size(946, 773);
             this.Name = "Canves";
             this.ResumeLayout(false);
-            
         }
     }
 
@@ -39,17 +44,17 @@ namespace Voyage_Engine.Rendere_Engine
         public event Action OnBeforeFrame;
         public event Action OnAfterFrame;
         public event Action OnCloseWindow;
-        
+
+        public static Canves Windows => _window;
+
+        private static  Canves _window;
         private static List<IRenderable> _renderObjects;
         
         private Vector2 _screenSize;
         private string _windowTitle;
-        private static  Canves _window;
         private Thread _renderLoopThread;
 
         private bool _sceneInitialized;
-
-        public static Canves Window => _window;
 
        
         public MainRenderEngine(Vector2 screenSize,string windowTitle)
@@ -81,6 +86,8 @@ namespace Voyage_Engine.Rendere_Engine
         {
             Application.Run(_window);
         }
+
+
 
         private void RenderLoop()
         {
